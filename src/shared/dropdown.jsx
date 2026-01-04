@@ -1,12 +1,21 @@
 import '../styles/dropdown.css'
 
 
-const Dropdown = ()=>{
-
+const Dropdown = (props)=>{
+    const {getDowndown, setDropdown} = props
+    const closeDropdown = ()=>{
+        if(getDowndown == true){
+            setDropdown(false);
+        }
+    }
     return (
         <>
-            <div>
-                <h1>Test box</h1>
+            <div id="box">
+                <p>Who is this?</p>
+                <button onClick={closeDropdown}>1</button>
+                <button onClick={closeDropdown}>2</button>
+                <button onClick={closeDropdown}>3</button>
+
             </div>
         </>
     )
